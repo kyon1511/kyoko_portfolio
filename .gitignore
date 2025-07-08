@@ -1,0 +1,15 @@
+# node_modules はすべて無視
+node_modules/
+
+# Next.js のビルド関連
+.next/
+out/
+
+# 環境変数（秘密情報）
+.env
+
+# ログファイル
+npm-debug.log*
+
+# VS Code の設定ファイル
+.vscode/
