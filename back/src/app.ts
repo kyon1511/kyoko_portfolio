@@ -1,13 +1,17 @@
-// src/app.ts
 import express from 'express';
+import { PrismaClient } from '@prisma/client';
 
 const app = express();
-const port = 4000;
+const prisma = new PrismaClient();
 
-app.get('/', (req, res) => {
-  res.send('Hello from Express + TypeScript!');
+app.use(express.json());
+
+app.get('/profiles', async (req, res) => {
+  const profiles = await prisma.profile.findMany();
+  res.json(profiles);
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
+app.listen(4000, () => {
+  console.log('Server running on http://localhost:4000');
 });
+
