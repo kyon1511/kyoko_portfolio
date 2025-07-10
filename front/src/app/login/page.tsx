@@ -13,18 +13,32 @@ export default function LoginPage() {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      router.push('/'); // ログイン後にトップページへ遷移
+      router.push('/admin'); 
     } catch (error) {
       alert('ログインに失敗しました');
     }
   };
 
   return (
-    <div>
-      <h1>ログイン</h1>
-      <input type="email" onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>ログイン</button>
-    </div>
-  );
-}
+  <div style={{ padding: '2rem' }}>
+    <h1>ログイン画面</h1>
+    <input
+      type="email"
+      placeholder="メールアドレス"
+      onChange={(e) => setEmail(e.target.value)}
+      style={{ display: 'block', marginBottom: '1rem', padding: '0.5rem' }}
+    />
+    <input
+      type="password"
+      placeholder="パスワード"
+      onChange={(e) => setPassword(e.target.value)}
+      style={{ display: 'block', marginBottom: '1rem', padding: '0.5rem' }}
+    />
+    <button
+      onClick={handleLogin}
+      style={{ padding: '0.5rem 1rem', cursor: 'pointer' }}
+    >
+      ログイン
+    </button>
+  </div>
+)};
