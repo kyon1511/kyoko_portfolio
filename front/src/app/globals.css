@@ -1,9 +1,10 @@
-/* globals.css */
+/* src/app/globals.css */
 
-@import "tailwindcss/preflight";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ↓ 以下はカスタムCSS */
+/* カスタムCSS */
 :root {
   --background: #ffffff;
   --foreground: #171717;
