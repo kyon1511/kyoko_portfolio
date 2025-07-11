@@ -6,7 +6,7 @@ const app = express();
 const prisma = new PrismaClient();
 
 app.use(express.json());
-app.use("/api/work", workRoutes);
+app.use('/work', workRoutes);
 
 app.get('/profiles', async (req, res) => {
   const profiles = await prisma.profile.findMany();
