@@ -24,7 +24,7 @@
   "settings": {
     "import/resolver": {
       "typescript": {
-        "project": "./tsconfig.json"
+        "project": "./front/tsconfig.json"
       }
     }
   }

@@ -1,6 +1,6 @@
 import './globals.css';
 import { ReactNode } from 'react';
-import Navigation from '@/components/Navigation'; // ← ここで追加
+import Navigation from '@/components/Navigation';
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
