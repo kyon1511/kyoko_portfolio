@@ -20,5 +20,12 @@
   "rules": {
     "no-console": "off",
     "no-unused-vars": "warn"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      }
+    }
   }
 }
