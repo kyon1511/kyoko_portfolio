@@ -13,7 +13,7 @@ export default function ContactPage() {
             href="mailto:yourname@example.com"
             className="text-blue-600 underline"
           >
-            yourname@example.com
+            kyoko.job2506@gmail.com
           </a>
         </li>
         <li>
