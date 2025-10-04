@@ -1,9 +1,10 @@
-# Kyon Portfolio
+# kyoko Portfolio
 
 管理画面付きのポートフォリオサイト。  
 Next.js（App Router）＋ Express.js + Prisma + MySQL + Firebaseを使用。
 
 ## 📁 ディレクトリ構成
+
 ├── front/ # フロントエンド（Next.js）
 ├── back/ # バックエンド（Express + Prisma）
 ├── README.md
@@ -33,3 +34,4 @@ npm run dev
 cd ../back
 npm install
 npm run dev
+```
