@@ -8,9 +8,9 @@ export default function Navigation() {
 
   const links = [
     { href: '/', label: 'Home' },
-    { href: '/works', label: 'Works' },
-    { href: '/skills', label: 'Skill' },
     { href: '/about', label: 'About' },
+    { href: '/skills', label: 'Skill' },
+    { href: '/works', label: 'Works' },
     { href: '/contact', label: 'Contact' },
   ];
 
