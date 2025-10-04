@@ -13,3 +13,6 @@ npm-debug.log*
 
 # VS Code の設定ファイル
 .vscode/
+
+# macOS system files
+.DS_Store
