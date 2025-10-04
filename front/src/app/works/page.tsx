@@ -28,6 +28,7 @@ export default function WorksPage() {
         'インフラ: Docker＋Docker Compose',
       ],
       github: 'https://github.com/kyon1511/LINEBot_Public',
+      demo: '', // デモ未公開なら空欄でOK
     },
     {
       title: 'デイリーレポート管理アプリ',
@@ -51,41 +52,48 @@ export default function WorksPage() {
         'UI: shadcn/ui、カスタムCSS',
         'デプロイ: Vercel',
       ],
-      github: '準備中',
+      github: 'https://github.com/kyon1511/kyoko_portfolio',
+      demo: 'https://kyoko-portfolio-9pr6qi7by-kyon1511s-projects.vercel.app/',
     },
   ];
 
   return (
-    <div className="p-10 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="p-10 grid grid-cols-1 md:grid-cols-2 gap-6">
       {works.map((work, index) => (
         <div
           key={index}
-          className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+          className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition"
         >
-          <div className="p-6 space-y-4 leading-relaxed">
-            <h2 className="text-2xl font-bold text-[#2b0934]">{work.title}</h2>
-            <p className="text-gray-700">{work.description}</p>
-
-            <ul className="list-disc pl-5 text-gray-600 space-y-2 text-sm">
+          <div className="p-4 space-y-2 leading-relaxed">
+            <h2 className="text-xl font-bold mb-2 text-[#2b0934]">
+              {work.title}
+            </h2>
+            <p className="mb-2 text-gray-700">{work.description}</p>
+            <ul className="text-sm text-gray-500 list-disc pl-5 mb-2">
               {work.tech.map((t, i) => (
                 <li key={i}>{t}</li>
               ))}
             </ul>
-
-            <p className="pt-2 text-sm">
-              {work.github !== '準備中' ? (
-                <a
-                  href={work.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 hover:underline"
-                >
-                  GitHub リポジトリ
-                </a>
-              ) : (
-                <span className="text-gray-400">準備中</span>
+            <div className="text-sm text-blue-600 space-y-1">
+              {work.github && (
+                <p>
+                  <a
+                    href={work.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub リポジトリ
+                  </a>
+                </p>
               )}
-            </p>
+              {work.demo && (
+                <p>
+                  <a href={work.demo} target="_blank" rel="noopener noreferrer">
+                    公開サイト（Vercel）
+                  </a>
+                </p>
+              )}
+            </div>
           </div>
         </div>
       ))}
